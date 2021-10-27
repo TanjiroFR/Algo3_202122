@@ -27,7 +27,6 @@ void ajouter(Client c, Tab t, int * nbClients) {
     
     if (t[nbClients] > t[N - 1])
     {
-
         return 0;
     }
     else {
@@ -35,6 +34,9 @@ void ajouter(Client c, Tab t, int * nbClients) {
         nbClients = nbClients +1;
         return 1;
     }
+}
+
+int saisieClients(Tab t, int p, int * nbClients) {
     
 }
 
@@ -45,8 +47,8 @@ int main(int argc, char **argv)
     saisie(&clicli);
 
     Tab t;
-    int *nbClients;
-    ajouter(clicli,t,nbClients);
+    int *nombreclicli;
+    ajouter(clicli,t,nombreclicli);
 
 	return 0;
 }
