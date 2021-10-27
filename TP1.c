@@ -3,7 +3,7 @@
 /**
  * Code Donovan PEREIRA DE REZENDE
 **/
-#define N 15
+#define N 20
 
 typedef char Chaine [15];
 typedef struct
@@ -23,11 +23,30 @@ void saisie(Client * c) {
     printf("Nom du client : %s | L'ID du client : %d",c->nom, c->ID_Client);
 }
 
-int main(int argc, char **argv)
-{
-	printf("Algo3 2021-22 / TP1\n ");
-    Client c1;
-    saisie(&c1);
-	return 0;
+void ajouter(Client c, Tab t, int * nbClients) {
+    
+    if (t[nbClients] > t[N - 1])
+    {
+
+        return 0;
+    }
+    else {
+        t[nbClients].nom = c.nom;
+        nbClients = nbClients +1;
+        return 1;
+    }
+    
 }
 
+int main(int argc, char **argv)
+{
+	printf("Algo3 2021-22 | TP1\n ");
+    Client clicli;
+    saisie(&clicli);
+
+    Tab t;
+    int *nbClients;
+    ajouter(clicli,t,nbClients);
+
+	return 0;
+}
